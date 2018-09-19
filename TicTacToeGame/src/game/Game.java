@@ -3,6 +3,7 @@ package game;
 import java.awt.Color;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import board.BoardManager;
 import board.Square;
@@ -45,7 +46,7 @@ public class Game {
 									&& squares[i][1].getSquareState().equals 
 									(squares[i][2].getSquareState())) {
 								System.out.println( squares[i][0].getSquareState() + " has won");
-								System.exit(0);
+								popUp();
 					
 				}
 				
@@ -54,7 +55,7 @@ public class Game {
 						&& squares[1][i].getSquareState().equals 
 						(squares[2][i].getSquareState())) {
 					System.out.println( squares[0][i].getSquareState() + " has won");
-					System.exit(0);
+					popUp();
 					}
 				}
 		if (squares[i][i].getSquareState().equals("O")) {		
@@ -63,7 +64,7 @@ public class Game {
 									&& squares[i][1].getSquareState().equals 
 									(squares[i][2].getSquareState())) {
 								System.out.println( squares[i][0].getSquareState() + " has won");
-								System.exit(0);
+								popUp();
 					
 				}
 				
@@ -72,14 +73,16 @@ public class Game {
 						&& squares[1][i].getSquareState().equals 
 						(squares[2][i].getSquareState())) {
 					System.out.println( squares[0][i].getSquareState() + " has won");
-					System.exit(0);
+					popUp();
 					}
 				}
 			} 
 		}
-
+public static void popUp() {
+	JOptionPane.showMessageDialog(window, "YOU WON");
+	}
 }
 	
-			
+
 
 	
