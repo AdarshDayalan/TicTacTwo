@@ -37,7 +37,7 @@ public class Game {
 	public static void detectWinner() {
 			Square[][] squares = boardManager.getBoard().getSquares();
 			squares[0][0].getSquareState();
-			boolean gameWinner = false;
+			
 
 	for (int i = 0; i < squares.length; i++) {
 		if (squares[i][i].getSquareState().equals("X")) {		
@@ -56,15 +56,25 @@ public class Game {
 						(squares[2][i].getSquareState())) {
 					System.out.println( squares[0][i].getSquareState() + " has won");
 					popUp();
-					}
 				}
+				
+				else if(squares[0][0].getSquareState().equals 
+						(squares[1][1].getSquareState())
+						&& squares[1][1].getSquareState().equals 
+						(squares[2][2].getSquareState())) {
+					System.out.println( squares[0][0].getSquareState() + " has won");
+					popUp();
+				}
+			}
+		
+		
 		if (squares[i][i].getSquareState().equals("O")) {		
-			if (squares[i][0].getSquareState().equals 
-									(squares[i][1].getSquareState())
-									&& squares[i][1].getSquareState().equals 
-									(squares[i][2].getSquareState())) {
-								System.out.println( squares[i][0].getSquareState() + " has won");
-								popUp();
+				if (squares[i][0].getSquareState().equals 
+						(squares[i][1].getSquareState())
+						&& squares[i][1].getSquareState().equals 
+						(squares[i][2].getSquareState())) {
+				System.out.println( squares[i][0].getSquareState() + " has won");
+				popUp();
 					
 				}
 				
@@ -75,9 +85,20 @@ public class Game {
 					System.out.println( squares[0][i].getSquareState() + " has won");
 					popUp();
 					}
+				
+				else if(squares[0][0].getSquareState().equals 
+						(squares[1][1].getSquareState())
+						&& squares[1][1].getSquareState().equals 
+						(squares[2][2].getSquareState())) {
+					System.out.println( squares[0][0].getSquareState() + " has won");
+					popUp();
+					}
+				
+				
 				}
 			} 
 		}
+
 public static void popUp() {
 	JOptionPane.showMessageDialog(window, "YOU WON");
 	}

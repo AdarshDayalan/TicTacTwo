@@ -18,7 +18,6 @@ public class SquareListener implements MouseListener{
 		int x = e.getX();
 		int y = e.getY();
 		int playerTurn = manager.getPlayerTurn();
-		boolean gameWinner = false;
 		
 		for(int i = 0; i <  squares.length; i++) {
 			for(int j = 0; j < squares.length; j++) {
